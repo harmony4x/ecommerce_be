@@ -15,11 +15,20 @@ const keyTokenSchema = new Schema({
         required: true,
 
     },
-    refreshToken: {
-        type: Array,
+    privateKey: {
+        type: String,
+        required: true,
+
+    },
+    refreshTokensUsed: {
+        type: Array, // nhung refresh tokens da duoc su dung
         default: [],
 
     },
+    refreshToken: {
+        type: String,
+        required: true,
+    }
 },
     {
         collection: COLLECTION_NAME,
